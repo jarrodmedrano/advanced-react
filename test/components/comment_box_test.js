@@ -21,7 +21,6 @@ describe('Test CommentBox', () => {
   });
 
   describe('entering some text', () => {
-
     beforeEach(() => {
       component.find('textarea').simulate('change', 'new comment');
     });
@@ -33,10 +32,6 @@ describe('Test CommentBox', () => {
     it('when submitted, clears the input', () => {
       component.simulate('submit');
       expect(component.find('textarea')).to.have.value('');
-    });
-
-    it('shows a comment list', () => {
-      expect(component.find('.comment-list')).to.exist;
     });
   });
 });
